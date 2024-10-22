@@ -71,11 +71,11 @@ public class Practica01JUnit5 {
 		assertFalse(d02.equals(d04));
 		assertFalse(d03.equals(d04));
 	
-		assertEquals("{3, 4, 7, 8, 9}", d01.getGradoSimilitud(d02).toString());
-		assertEquals("{3, 4, 5, 7, 8, 9}", d01.getGradoSimilitud(d03).toString());
-		assertEquals("{}", d01.getGradoSimilitud(d04).toString());
-		assertEquals("{0, 3, 4, 7, 8, 9}", d02.getGradoSimilitud(d03).toString());
-		assertEquals("{}", d03.getGradoSimilitud(d04).toString());
+		assertEquals("{3, 4, 7, 8, 9}", d01.getInterseccion(d02).toString());
+		assertEquals("{3, 4, 5, 7, 8, 9}", d01.getInterseccion(d03).toString());
+		assertEquals("{}", d01.getInterseccion(d04).toString());
+		assertEquals("{0, 3, 4, 7, 8, 9}", d02.getInterseccion(d03).toString());
+		assertEquals("{}", d03.getInterseccion(d04).toString());
 		
 		d01 = d02 = d03 = d04 = null;
 	}
@@ -260,12 +260,12 @@ public class Practica01JUnit5 {
 				     "4.- Eve -> [disp03 {3, 4, 5, 9}, disp04 {0, 1, 2, 6, 7, 8, 9}]]", 
 				      gestion.toString());
 		
-		assertEquals("{0}", usuario01.getGradoSimilitud(usuario02).toString());
-		assertEquals("{0, 9}", usuario01.getGradoSimilitud(usuario03).toString());
-		assertEquals("{0, 9}", usuario01.getGradoSimilitud(usuario04).toString());
-		assertEquals("{0, 1, 2, 3, 4, 5, 6}", usuario02.getGradoSimilitud(usuario03).toString());
-		assertEquals("{0, 1, 2, 3, 4, 5, 6}", usuario02.getGradoSimilitud(usuario04).toString());
-		assertEquals("{0, 1, 2, 3, 4, 5, 6, 9}", usuario03.getGradoSimilitud(usuario04).toString());
+		assertEquals("{0}", usuario01.getInterseccion(usuario02).toString());
+		assertEquals("{0, 9}", usuario01.getInterseccion(usuario03).toString());
+		assertEquals("{0, 9}", usuario01.getInterseccion(usuario04).toString());
+		assertEquals("{0, 1, 2, 3, 4, 5, 6}", usuario02.getInterseccion(usuario03).toString());
+		assertEquals("{0, 1, 2, 3, 4, 5, 6}", usuario02.getInterseccion(usuario04).toString());
+		assertEquals("{0, 1, 2, 3, 4, 5, 6, 9}", usuario03.getInterseccion(usuario04).toString());
 		assertEquals("Bob -> Alice <1> Chace <2> Eve <2> ", gestion.getGradosSimilitud(usuario01));
 		assertEquals("Alice -> Bob <1> Chace <7> Eve <7> ", gestion.getGradosSimilitud(usuario02));
 		assertEquals("Chace -> Bob <2> Alice <7> Eve <8> ", gestion.getGradosSimilitud(usuario03));
