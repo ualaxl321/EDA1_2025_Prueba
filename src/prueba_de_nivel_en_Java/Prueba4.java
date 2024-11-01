@@ -27,15 +27,27 @@ public class Prueba4 {
         this.datos.get(pos).getValue().addAll(List.of(valores));
     }
 
+//    public ArrayList<Par<String, Integer>> resume() {
+//        ArrayList<Par<String, Integer>> result = new ArrayList<>();
+//        for (Par<String, ArrayList<Integer>> par : this.datos) {
+//            //result.add(new Par<>(par.getKey(), par.getValue().size()));
+//        	result.add(new Par<>(par.getKey(), Collections.max(par.getValue())));
+//        }
+//        return result;
+//    }
+
     public ArrayList<Par<String, Integer>> resume() {
         ArrayList<Par<String, Integer>> result = new ArrayList<>();
         for (Par<String, ArrayList<Integer>> par : this.datos) {
-            //result.add(new Par<>(par.getKey(), par.getValue().size()));
-        	result.add(new Par<>(par.getKey(), Collections.max(par.getValue())));
+        	int suma = 0;
+        	for (Integer valor: par.getValue()) {
+        		suma += valor;
+        	}
+        	result.add(new Par<>(par.getKey(), suma));
         }
         return result;
     }
-
+    
     @Override
     public String toString() {
         return this.datos.toString();

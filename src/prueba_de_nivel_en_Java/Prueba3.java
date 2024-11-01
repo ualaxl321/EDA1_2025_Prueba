@@ -21,8 +21,7 @@ public class Prueba3 {
     public void add(String clave, Integer... valores) {
         Par<String, ArrayList<Integer>> parCurrent = this.datos.find(new Par<>(clave, null));
         if (parCurrent == null) {
-            parCurrent = new Par<>(clave, new ArrayList<>());
-            this.datos.add(parCurrent);
+            this.datos.add(parCurrent = new Par<>(clave, new ArrayList<>()));
         }
         parCurrent.getValue().addAll(List.of(valores));
     }

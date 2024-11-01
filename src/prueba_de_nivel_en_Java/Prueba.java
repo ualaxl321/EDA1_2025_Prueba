@@ -16,7 +16,7 @@ public class Prueba implements Comparable<Prueba> {
     @Override
     public int compareTo(Prueba other) {
         int cmp = this.c1.compareTo(other.c1);
-        return cmp != 0 ? cmp : this.c2.compareTo(other.c2);
+        return cmp != 0 ? cmp : other.c2.compareTo(this.c2);
     }
 
     public static void main(String[] args) {

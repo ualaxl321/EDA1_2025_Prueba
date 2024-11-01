@@ -21,10 +21,10 @@ public class Ejercicio3 {
 	        //Añado el array a datos
 	        datos.add(aux);
 	        //Borro el array y reinicio bucle, por lo que aux siempre está vacío y no se acumula
-	        aux.clear();
+	        //aux.clear();
 	        
 	        //Deja aux con null, pero no lo borra
-	        //aux = null; 
+	        aux = null; 
 	    }
 	    //No muestra nada por que está vacío
 	    System.out.println(datos);

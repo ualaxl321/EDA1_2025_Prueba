@@ -25,7 +25,7 @@ public class Prueba2 {
 //		if(datos.get(indice) == null) datos.set(indice, new PriorityQueue<>(Comparator.naturalOrder()));{
 //			datos.get(indice).addAll(List.of(valores));
 //		}
-		
+//		System.out.println(datos);
 		if(datos.get(indice) == null) datos.set(indice, new PriorityQueue<>(Comparator.reverseOrder()));{
 			datos.get(indice).addAll(List.of(valores));
 		}

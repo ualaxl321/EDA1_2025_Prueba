@@ -15,7 +15,7 @@ public class ComparatorStr implements Comparator<String> {
 	// Esta ordenación se produce gracias a sort (El que ordena), -Integer los compara ordenándolos al revés
     @Override
     public int compare(String o1, String o2) {
-        return -Integer.compare(o1.length(), o2.length());
+        return Integer.compare(o1.length(), o2.length());
     }
 
     public static void main(String[] args) {
